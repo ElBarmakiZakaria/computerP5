@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="formValidation.js" defer></script> <!-- External JS file -->
+</head>
+<body>
+    <h2>Form with Validation</h2>
+    <form id="myForm">
+        <!-- Postal Code Field -->
+        <label for="postalCode">Postal Code (format: 12-345): </label>
+        <input type="text" id="postalCode" name="postalCode">
+        <span id="postalError" style="color: red;"></span>
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email">
+        <span id="emailError" style="color: red;"></span>
+        <br><br>
+
+        <!-- Integer Field -->
+        <label for="integerValue">Integer (5 - 20): </label>
+        <input type="text" id="integerValue" name="integerValue">
+        <span id="integerError" style="color: red;"></span>
+        <br><br>
+
+        <!-- Day of the Week Dropdown -->
+        <label for="dayOfWeek">Day of the Week: </label>
+        <select id="dayOfWeek" name="dayOfWeek">
+            <option value="default">-- Select a Day --</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+        <br><br>
+
+        <!-- Checkbox -->
+        <label for="agreement">I accept the agreement for processing personal data</label>
+        <input type="checkbox" id="agreement" name="agreement">
+        <span id="agreementError" style="color: red;"></span>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <!-- Validation Success/Error Messages -->
+    <p id="formError" style="color: red;"></p>
+</body>
+</html>
